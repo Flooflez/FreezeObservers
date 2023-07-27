@@ -1,13 +1,22 @@
-# No TNT Griefing
+# Freeze Observers
 
-This simple fabric mod for Minecraft that implements a new gamerule that prevents observers from sending a redstone signal. This is super helpful when building with observers to stop them from triggering pistons, droppers and other redstone components before they're ready. 
+This simple fabric mod for Minecraft that implements a new gamerule that toggles the functionality of observers by preventing them from sending a redstone signal. This is super helpful when building with observers to stop them from accidentally triggering pistons, droppers, and other redstone components before they're ready. 
 
-### How it works
+### How do I use this?
 Use the following command
 ```
 /gamerule freezeObservers true
 ```
 to stop observers from emitting a redstone signal. 
+
+This mod is compatible with World Edit and Litematica, making it easy to copy and paste redstone without triggering or updating any observers.
+
+![FreezeObserversDemoGif](https://github.com/Flooflez/FreezeObservers/blob/1.20/assets/demo.gif?raw=true)
+
+### How it works
+This mod is really simple, and just makes observers always output a signal of 0 when the gamerule is enabled. This means observers themselves will no longer give any output, but are still detected by other observers and other block update detectors.
+
+This is a vanilla compatible mod, meaning only the server host needs to have the mod installed for players to use this.
 
 ## Installation Instructions (Single Player Worlds)
 1. Go to the [FabricMC website](https://fabricmc.net/use/installer/) and download the latest installer
